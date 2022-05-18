@@ -23,21 +23,28 @@ else
     Console.WriteLine("Ошибка. Введено некорректное значение.");
 }
 
-//Второй вариант решения через строковую переменную
+//Второй вариант решения через строковую переменную с методом
 Console.WriteLine("Введите пятизначное число");
 string number = (Console.ReadLine());
-if (number.Length == 5)
+
+void checkPal(string numb)
 {
-    if (number[0] == number[4] && number[1] == number[3])
+if (numb.Length == 5)
+{
+    if (numb[0] == numb[4] && numb[1] == numb[3])
     {
-        Console.WriteLine($"{number} -> Да");
+        Console.WriteLine($"{numb} -> Да");
     }
     else
     {
-        Console.WriteLine($"{number} -> Нет");
+        Console.WriteLine($"{numb} -> Нет");
     }
 }
 else
 {
     Console.WriteLine("Ошибка. Введено некорректное значение.");
 }
+}
+
+checkPal(number);
+
