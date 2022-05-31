@@ -29,22 +29,33 @@ string number = (Console.ReadLine());
 
 void checkPal(string numb)
 {
-if (numb.Length == 5)
-{
-    if (numb[0] == numb[4] && numb[1] == numb[3])
+    if (numb.Length == 5)
     {
-        Console.WriteLine($"{numb} -> Да");
+        if (numb[0] == numb[4] && numb[1] == numb[3])
+        {
+            Console.WriteLine($"{numb} -> Да");
+        }
+        else
+        {
+            Console.WriteLine($"{numb} -> Нет");
+        }
     }
     else
     {
-        Console.WriteLine($"{numb} -> Нет");
+        Console.WriteLine("Ошибка. Введено некорректное значение.");
     }
-}
-else
-{
-    Console.WriteLine("Ошибка. Введено некорректное значение.");
-}
 }
 
 checkPal(number);
 
+// третий вариант через цикл:
+//3456543
+Console.WriteLine("Введите натуральное число");
+string numb = Console.ReadLine();
+bool isPolyndrom = true;
+for (int i = 0; i < numb.Length; i++)
+{
+    if (numb[i]!=number[number.Length-1-i])
+    isPolyndrom= false;
+}
+Console.WriteLine(isPolyndrom);

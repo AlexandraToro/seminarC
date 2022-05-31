@@ -5,7 +5,7 @@ Console.WriteLine("Введите количество элементов мас
 int num = int.Parse(Console.ReadLine());
 int[] array = new int[num];
 
-int[] GetArray(int[] arr1)
+void GetArray(int[] arr1)
 {
     int i = 0;
     while (i < arr1.Length)
@@ -13,7 +13,7 @@ int[] GetArray(int[] arr1)
         arr1[i] = new Random().Next(0, 100);
         i++;
     }
-    return arr1;
+    //return arr1;
 }
 void PrintArray(int[] arr2)
 {

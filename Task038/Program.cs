@@ -3,13 +3,12 @@
 Random num = new Random();
 int[] array = new int[num.Next(5, 10)];
 
-int[] GetArray(int[] arr1)
+void GetArray(int[] arr1)
 {
     for (int i = 0; i < arr1.Length; i++)
     {
         arr1[i] = num.Next(1, 100);
     }
-    return arr1;
 }
 
 void PrintArray(int[] arr2)
